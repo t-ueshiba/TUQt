@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.4)
-project(TUQt++)
+project(TUQt)
 
 enable_language(CXX)
 set(CMAKE_CXX_STANDARD		14)
@@ -32,7 +32,7 @@ set(moc_sources "")
 QT5_WRAP_CPP(moc_sources ${moc_headers})
 
 add_library(${PROJECT_NAME} SHARED ${sources} ${moc_sources})
-target_link_libraries(${PROJECT_NAME} TUTools++ ${Qt5Widgets_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} TUTools ${Qt5Widgets_LIBRARIES})
 
 install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION lib)
 
